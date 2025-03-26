@@ -1,0 +1,11 @@
+# Testar GET /produtos
+curl -X GET http://localhost:3000/produtos
+
+# Testar POST /produtos
+curl -X POST http://localhost:3000/produtos -H "Content-Type: application/json" -d '{"nome":"Produto E","fornecedor":"Fornecedor K","endereco_fornecedor":"Rua 5","quantidade":30,"endereco":"Armazém 5","preco_unitario":50.00}'
+
+# Testar PUT /produtos/:id
+curl -X PUT http://localhost:3000/produtos/1 -H "Content-Type: application/json" -d '{"nome":"Produto Atualizado","fornecedor":"Fornecedor X","endereco_fornecedor":"Rua 1","quantidade":100,"endereco":"Armazém 1","preco_unitario":99.99}'
+
+# Testar DELETE /produtos/:id
+curl -X DELETE http://localhost:3000/produtos/1
